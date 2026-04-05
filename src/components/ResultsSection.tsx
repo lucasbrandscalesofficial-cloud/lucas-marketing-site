@@ -1,65 +1,119 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight, Sparkles, TrendingUp } from "lucide-react";
 
 const ResultsSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section id="results" className="section-alt section-block">
-      <div ref={ref} className="mx-auto max-w-6xl">
+    <section id="results" className="section-alt section-block relative overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        aria-hidden
+      >
+        <div className="absolute -left-[20%] top-[-10%] h-[min(480px,80vw)] w-[min(480px,80vw)] rounded-full bg-primary/[0.14] blur-3xl" />
+        <div className="absolute -right-[15%] bottom-[-20%] h-[min(420px,75vw)] w-[min(420px,75vw)] rounded-full bg-emerald-500/[0.10] blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400/[0.06] blur-3xl" />
+      </div>
+
+      <div ref={ref} className="relative mx-auto max-w-6xl">
         <div
-          className={`mb-10 text-center transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`mb-10 text-center transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">Proof</p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground md:text-3xl">Real campaign results</h2>
-          <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">
-            Before and after — from day one to where the campaign stands today.
+          <div className="mb-4 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-gradient-to-r from-primary/10 via-primary/[0.07] to-emerald-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary shadow-sm ring-1 ring-primary/10">
+              <Sparkles className="h-3.5 w-3.5 shrink-0" aria-hidden />
+              Real Ads Manager numbers
+            </span>
+          </div>
+          <h2 className="text-balance text-3xl font-bold tracking-tight md:text-4xl">
+            <span className="bg-gradient-to-r from-foreground via-primary to-[hsl(160_55%_32%)] bg-clip-text text-transparent">
+              Real campaign results
+            </span>
+          </h2>
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base">
+            Watch the shift from day one to today — same campaign,{" "}
+            <span className="font-semibold text-foreground">serious momentum</span>.
           </p>
         </div>
 
         <div
-          className={`transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`transition-all delay-100 duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
         >
-          <div className="flex flex-col items-stretch gap-8 lg:flex-row lg:items-center lg:justify-center lg:gap-5 xl:gap-8">
+          <div className="flex flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-6 xl:gap-10">
             {/* Before */}
-            <div className="min-w-0 flex-1 lg:max-w-[min(100%,420px)]">
-              <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                BEFORE
-              </p>
-              <figure className="overflow-hidden rounded-2xl border border-border/80 bg-[hsl(222_28%_9%)] shadow-card ring-1 ring-black/[0.06]">
-                <img
-                  src="/campaign-results-before.png"
-                  alt="Ads Manager at campaign start: 1 call placed, $23.69 cost per call, $23.69 spent, $20 daily budget, 1 lead, 975 reach, 1,158 impressions."
-                  className="block h-auto w-full align-top"
-                  loading="lazy"
-                  decoding="async"
-                />
+            <div
+              className={`min-w-0 flex-1 transition-all duration-500 lg:max-w-[min(100%,420px)] ${visible ? "opacity-100" : "opacity-0"}`}
+              style={{ transitionDelay: visible ? "80ms" : "0ms" }}
+            >
+              <div className="mb-3 flex flex-col items-center gap-1.5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-muted-foreground">Before</p>
+                <span className="text-[10px] font-medium text-muted-foreground/80">The baseline</span>
+              </div>
+              <figure className="group relative overflow-hidden rounded-2xl border border-dashed border-muted-foreground/35 bg-muted/30 p-1 shadow-inner ring-1 ring-black/[0.04]">
+                <div className="overflow-hidden rounded-[0.9rem] bg-[hsl(222_28%_9%)] ring-1 ring-black/[0.06]">
+                  <img
+                    src="/campaign-results-before.png"
+                    alt="Ads Manager at campaign start: 1 call placed, $23.69 cost per call, $23.69 spent, $20 daily budget, 1 lead, 975 reach, 1,158 impressions."
+                    className="block h-auto w-full align-top opacity-[0.92] transition duration-300 group-hover:opacity-100"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
               </figure>
-              <p className="mt-2.5 text-center text-xs text-muted-foreground">Day one — first 24 hours</p>
+              <p className="mt-3 text-center text-xs text-muted-foreground">Day one — first 24 hours</p>
             </div>
 
             {/* Arrow */}
-            <div
-              className="flex shrink-0 justify-center text-primary lg:px-1"
-              aria-hidden
-            >
-              <ArrowDown size={28} strokeWidth={2.25} className="lg:hidden" />
-              <ArrowRight size={32} strokeWidth={2.25} className="hidden lg:block" />
+            <div className="flex shrink-0 flex-col items-center gap-1 lg:px-2" aria-hidden>
+              <div
+                className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary/25 via-primary/15 to-primary/5 text-primary shadow-lg shadow-primary/20 ring-2 ring-primary/35 ring-offset-4 ring-offset-[hsl(220_20%_97%)]"
+              >
+                <ArrowDown size={26} strokeWidth={2.5} className="animate-results-nudge-y lg:hidden" />
+                <ArrowRight size={28} strokeWidth={2.5} className="hidden animate-results-nudge-x lg:block" />
+              </div>
+              <span className="hidden text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80 lg:block">
+                Growth
+              </span>
             </div>
 
             {/* Now */}
-            <div className="min-w-0 flex-1 lg:max-w-[min(100%,420px)]">
-              <p className="mb-3 text-center text-[11px] font-bold uppercase tracking-[0.2em] text-primary">NOW</p>
-              <figure className="overflow-hidden rounded-2xl border border-border/80 bg-[hsl(222_28%_9%)] shadow-card ring-1 ring-black/[0.06]">
-                <img
-                  src="/campaign-results-now.png"
-                  alt="Ads Manager current: 16 calls placed, $38.28 cost per call, $600 spent, $20 daily budget, 16 leads, 21,522 reach, 32,390 impressions."
-                  className="block h-auto w-full align-top"
-                  loading="lazy"
-                  decoding="async"
+            <div
+              className={`min-w-0 flex-1 transition-all duration-500 lg:max-w-[min(100%,420px)] ${visible ? "opacity-100" : "opacity-0"}`}
+              style={{ transitionDelay: visible ? "180ms" : "0ms" }}
+            >
+              <div className="mb-3 flex flex-col items-center gap-1.5">
+                <div className="flex items-center gap-2">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">NOW</p>
+                  <TrendingUp className="h-4 w-4 text-emerald-600" strokeWidth={2.5} aria-hidden />
+                </div>
+                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-500/25">
+                  The payoff
+                </span>
+              </div>
+
+              <div className="relative">
+                <div
+                  className="pointer-events-none absolute -inset-3 rounded-[1.4rem] bg-primary/25 blur-2xl animate-results-glow"
+                  aria-hidden
                 />
-              </figure>
-              <p className="mt-2.5 text-center text-xs text-muted-foreground">Latest performance snapshot</p>
+                <div className="relative rounded-[1.15rem] bg-gradient-to-br from-primary via-sky-500/90 to-emerald-500/85 p-[2.5px] shadow-2xl shadow-primary/25">
+                  <figure className="overflow-hidden rounded-[1.05rem] bg-[hsl(222_28%_9%)] ring-1 ring-white/10">
+                    <img
+                      src="/campaign-results-now.png"
+                      alt="Ads Manager current: 16 calls placed, $38.28 cost per call, $600 spent, $20 daily budget, 16 leads, 21,522 reach, 32,390 impressions."
+                      className="block h-auto w-full align-top transition duration-300 hover:scale-[1.02] hover:brightness-[1.03]"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                </div>
+              </div>
+              <p className="mt-3 text-center text-sm font-medium text-foreground">
+                Latest snapshot —{" "}
+                <span className="bg-gradient-to-r from-primary to-emerald-600 bg-clip-text font-semibold text-transparent">
+                  scaled delivery and lead flow
+                </span>
+              </p>
             </div>
           </div>
         </div>
