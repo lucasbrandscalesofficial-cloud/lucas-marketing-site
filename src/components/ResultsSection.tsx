@@ -22,30 +22,23 @@ const CampaignSnapshot = ({
   badge,
   title,
   caption,
-  imageSrc,
-  imageAlt,
   metrics,
   visible,
 }: {
   badge: string;
   title: string;
   caption: string;
-  imageSrc: string;
-  imageAlt: string;
   metrics: SnapshotMetrics;
   visible: boolean;
 }) => (
   <div
-    className={`grid gap-6 lg:grid-cols-[1fr_1.05fr] lg:items-start transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+    className={`mx-auto max-w-2xl transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
   >
-    <figure className="overflow-hidden rounded-xl border border-border/80 bg-muted/30 shadow-card">
-      <img src={imageSrc} alt={imageAlt} className="block h-auto w-full align-top" loading="lazy" decoding="async" />
-      <figcaption className="border-t border-border/60 bg-card px-4 py-3 text-left">
-        <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">{badge}</span>
-        <p className="mt-0.5 text-sm font-semibold text-foreground">{title}</p>
-        <p className="mt-0.5 text-[11px] text-muted-foreground">{caption}</p>
-      </figcaption>
-    </figure>
+    <div className="mb-4 text-center sm:text-left">
+      <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">{badge}</span>
+      <p className="mt-1 text-base font-semibold text-foreground">{title}</p>
+      <p className="mt-0.5 text-sm text-muted-foreground">{caption}</p>
+    </div>
 
     <div className="rounded-xl border border-slate-700/80 bg-[hsl(222_28%_11%)] p-5 shadow-lg md:p-6">
       <div className="grid grid-cols-1 gap-4 border-b border-white/10 pb-5 sm:grid-cols-3 sm:gap-3 md:gap-4">
@@ -132,8 +125,6 @@ const ResultsSection = () => {
             badge="Start"
             title="Day one"
             caption="Right after launch — first 24 hours of the campaign."
-            imageSrc="/meta-campaign-results-start.png"
-            imageAlt="Meta Ads dashboard at start: 1 call placed, $23.69 cost per call, $23.69 spent, $20 daily budget, 1 lead, 975 reach, 1,158 impressions."
             metrics={startMetrics}
             visible={visible}
           />
@@ -141,8 +132,6 @@ const ResultsSection = () => {
             badge="Now"
             title="Current performance"
             caption="Latest snapshot — same campaign, scaled delivery and lead volume."
-            imageSrc="/meta-campaign-results-current.png"
-            imageAlt="Meta Ads dashboard current: 16 calls placed, $38.28 cost per call, $600 spent, $20 daily budget, 16 leads, 21,522 reach, 32,390 impressions."
             metrics={currentMetrics}
             visible={visible}
           />
