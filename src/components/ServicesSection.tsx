@@ -1,5 +1,8 @@
 import { Megaphone, FileText, Palette } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import Eyebrow from "@/components/Eyebrow";
+import SectionAmbient from "@/components/SectionAmbient";
+import { headingGradient } from "@/lib/visualStyles";
 
 const services = [
   {
@@ -23,13 +26,16 @@ const ServicesSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
-    <section id="services" className="section-block">
-      <div ref={ref} className="mx-auto max-w-5xl">
+    <section id="services" className="section-block relative overflow-hidden">
+      <SectionAmbient />
+      <div ref={ref} className="relative mx-auto max-w-5xl">
         <div
           className={`mb-8 text-center transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">Services</p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight text-foreground md:text-3xl">What I run</h2>
+          <Eyebrow>Services</Eyebrow>
+          <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
+            <span className={headingGradient}>What I run</span>
+          </h2>
           <p className="mx-auto mt-2 max-w-lg text-sm text-muted-foreground">Three pieces. One outcome: more qualified leads.</p>
         </div>
 
@@ -37,10 +43,10 @@ const ServicesSection = () => {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`flex min-h-[200px] flex-col rounded-xl border border-border/70 bg-card p-5 shadow-card transition-all duration-500 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              className={`group flex min-h-[200px] flex-col rounded-2xl border border-border/50 bg-card/90 p-5 shadow-lg shadow-primary/[0.06] ring-1 ring-black/[0.04] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: visible ? `${100 + i * 60}ms` : "0ms" }}
             >
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-secondary">
+              <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary/25 to-emerald-500/15 ring-1 ring-primary/15 transition group-hover:from-primary/35 group-hover:to-emerald-500/25">
                 <service.icon size={18} className="text-primary" />
               </div>
               <h3 className="text-base font-bold tracking-tight text-foreground">{service.title}</h3>
