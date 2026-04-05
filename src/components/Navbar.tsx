@@ -15,8 +15,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/60">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-16 px-6">
-        <a href="#" className="text-lg font-bold tracking-tight text-foreground">
-          Lucas Marketing
+        <a href="#" className="flex items-center shrink-0">
+          <img
+            src="/lucas-marketing-logo.png"
+            alt="Lucas Marketing"
+            className="h-9 w-auto max-h-10 object-contain object-left"
+          />
         </a>
 
         {/* Desktop */}
