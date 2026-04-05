@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import SectionAmbient from "@/components/SectionAmbient";
-import { headingGradient } from "@/lib/visualStyles";
+import { heading } from "@/lib/visualStyles";
 
 const painPoints = [
   { title: "Not enough leads", sub: "Quiet phone. Gaps on the calendar." },
@@ -15,7 +15,7 @@ const PainPointsSection = () => {
 
   return (
     <section className="section-pain section-block relative overflow-hidden">
-      <SectionAmbient />
+      <SectionAmbient variant="pain" />
       <div
         ref={ref}
         className={`relative mx-auto max-w-6xl transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-4 blur-[4px]"}`}
@@ -26,7 +26,7 @@ const PainPointsSection = () => {
               The problem
             </Eyebrow>
             <h2 className="text-balance text-2xl font-bold leading-tight tracking-tight md:text-3xl">
-              <span className={headingGradient}>Where will the next job come from?</span>
+              <span className={heading.pain}>Where will the next job come from?</span>
             </h2>
             <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted-foreground lg:mx-0">
               Most local owners hit these gaps before there is a clear ad system.

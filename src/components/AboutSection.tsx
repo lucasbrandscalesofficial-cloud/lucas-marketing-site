@@ -1,14 +1,14 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import SectionAmbient from "@/components/SectionAmbient";
-import { headingGradient } from "@/lib/visualStyles";
+import { heading } from "@/lib/visualStyles";
 
 const AboutSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
     <section id="about" className="section-block relative overflow-hidden">
-      <SectionAmbient />
+      <SectionAmbient variant="about" />
       <div
         ref={ref}
         className={`relative mx-auto flex max-w-5xl flex-col items-center gap-6 text-center sm:flex-row sm:gap-10 sm:text-left transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
@@ -27,9 +27,11 @@ const AboutSection = () => {
         </div>
 
         <div className="min-w-0">
-          <Eyebrow align="responsive-start">About</Eyebrow>
+          <Eyebrow variant="fuchsia" align="responsive-start">
+            About
+          </Eyebrow>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-            <span className={headingGradient}>Lucas</span>
+            <span className={heading.about}>Lucas</span>
           </h2>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">
             I run Lucas Marketing and help local service businesses generate leads through Meta ads.

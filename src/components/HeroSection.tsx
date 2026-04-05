@@ -2,17 +2,19 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Eyebrow from "@/components/Eyebrow";
 import SectionAmbient from "@/components/SectionAmbient";
-import { headingGradient } from "@/lib/visualStyles";
+import { heading } from "@/lib/visualStyles";
 
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden px-4 pb-10 pt-24 sm:px-5 md:pb-14 md:pt-28">
-      <SectionAmbient />
+      <SectionAmbient variant="hero" />
       <div className="relative mx-auto grid max-w-5xl animate-fade-up items-center gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:gap-12">
         <div className="text-center lg:text-left">
-          <Eyebrow align="responsive-start">Lucas Marketing</Eyebrow>
+          <Eyebrow variant="sky" align="responsive-start">
+            Lucas Marketing
+          </Eyebrow>
           <h1 className="mb-3 text-balance text-3xl font-bold leading-[1.1] tracking-tight md:text-4xl lg:text-[2.45rem]">
-            <span className={headingGradient}>More local leads from Meta ads — without the guesswork.</span>
+            <span className={heading.hero}>More local leads from Meta ads — without the guesswork.</span>
           </h1>
           <p className="mx-auto mb-7 max-w-md text-base leading-snug text-muted-foreground lg:mx-0">
             Facebook and Instagram lead campaigns for service businesses. More booked calls, less wasted spend.

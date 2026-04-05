@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import SectionAmbient from "@/components/SectionAmbient";
-import { headingGradient } from "@/lib/visualStyles";
+import { heading } from "@/lib/visualStyles";
 import demoCar from "@/assets/demos/demo-car-detailing.png";
 import demoRoof from "@/assets/demos/demo-roofing.png";
 import demoDog from "@/assets/demos/demo-dog-grooming.png";
@@ -37,14 +37,14 @@ const DemoSection = () => {
 
   return (
     <section id="demos" className="section-alt section-block relative overflow-hidden">
-      <SectionAmbient />
+      <SectionAmbient variant="demo" />
       <div ref={ref} className="relative mx-auto max-w-5xl">
         <div
           className={`mb-8 text-center transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          <Eyebrow>Demo work</Eyebrow>
+          <Eyebrow variant="amber">Demo work</Eyebrow>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-            <span className={headingGradient}>Demo campaigns</span>
+            <span className={heading.demo}>Demo campaigns</span>
           </h2>
           <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">Examples of creatives built for real local offers.</p>
         </div>
@@ -66,7 +66,7 @@ const DemoSection = () => {
                 />
               </div>
               <div className="flex min-h-[100px] flex-1 flex-col p-5">
-                <span className="mb-2 inline-block w-fit rounded-full border border-primary/20 bg-gradient-to-r from-primary/10 to-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-primary ring-1 ring-primary/10">
+                <span className="mb-2 inline-block w-fit rounded-full border border-amber-400/35 bg-gradient-to-r from-amber-500/15 to-orange-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-900 ring-1 ring-amber-400/20">
                   {demo.label}
                 </span>
                 <h3 className="text-base font-bold tracking-tight text-foreground">{demo.title}</h3>

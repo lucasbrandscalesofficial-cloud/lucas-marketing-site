@@ -4,7 +4,7 @@ import { ArrowRight, Mail, Instagram } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import SectionAmbient from "@/components/SectionAmbient";
-import { headingGradient } from "@/lib/visualStyles";
+import { heading } from "@/lib/visualStyles";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -16,7 +16,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="section-block relative overflow-hidden pb-16 md:pb-20">
-      <SectionAmbient />
+      <SectionAmbient variant="contact" />
       <div
         ref={ref}
         className={`relative mx-auto max-w-5xl transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
@@ -27,9 +27,11 @@ const ContactSection = () => {
               <div className="relative flex flex-col justify-center bg-gradient-to-br from-primary/[0.08] via-primary/[0.05] to-emerald-500/[0.06] p-6 md:p-8 lg:p-10">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_20%,hsl(210_100%_46%/0.12),transparent_55%)]" aria-hidden />
                 <div className="relative">
-                  <Eyebrow align="start">Next step</Eyebrow>
+                  <Eyebrow variant="indigo" align="start">
+                    Next step
+                  </Eyebrow>
                   <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-                    <span className={headingGradient}>Book a call</span>
+                    <span className={heading.contact}>Book a call</span>
                   </h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">15 minutes. No pressure. See if it makes sense.</p>
                   <Button variant="hero" size="lg" className="mt-6 w-full shadow-lg shadow-primary/25 sm:w-auto sm:min-w-[220px]" asChild>

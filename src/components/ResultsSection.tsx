@@ -1,13 +1,14 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ArrowDown, ArrowRight, Sparkles, TrendingUp } from "lucide-react";
 import SectionAmbient from "@/components/SectionAmbient";
+import { heading } from "@/lib/visualStyles";
 
 const ResultsSection = () => {
   const { ref, visible } = useScrollReveal();
 
   return (
     <section id="results" className="section-alt section-block relative overflow-hidden">
-      <SectionAmbient />
+      <SectionAmbient variant="results" />
 
       <div ref={ref} className="relative mx-auto max-w-6xl">
         <div
@@ -20,9 +21,7 @@ const ResultsSection = () => {
             </span>
           </div>
           <h2 className="text-balance text-3xl font-bold tracking-tight md:text-4xl">
-            <span className="bg-gradient-to-r from-foreground via-primary to-[hsl(160_55%_32%)] bg-clip-text text-transparent">
-              Real campaign results
-            </span>
+            <span className={heading.results}>Real campaign results</span>
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base">
             Watch the shift from day one to today — same campaign,{" "}

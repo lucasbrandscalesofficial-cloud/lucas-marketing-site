@@ -17,7 +17,10 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-background/75 shadow-sm shadow-primary/[0.06] backdrop-blur-xl">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" aria-hidden />
       <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a href="#" className="bg-gradient-to-r from-foreground to-primary bg-clip-text text-lg font-bold tracking-tight text-transparent">
+        <a
+          href="#"
+          className="bg-gradient-to-r from-sky-800 via-foreground to-primary bg-clip-text text-lg font-bold tracking-tight text-transparent"
+        >
           Lucas Marketing
         </a>
 

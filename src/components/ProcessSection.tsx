@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import Eyebrow from "@/components/Eyebrow";
 import SectionAmbient from "@/components/SectionAmbient";
-import { headingGradient } from "@/lib/visualStyles";
+import { heading } from "@/lib/visualStyles";
 
 const steps = [
   {
@@ -26,14 +26,14 @@ const ProcessSection = () => {
 
   return (
     <section id="process" className="section-alt section-block relative overflow-hidden">
-      <SectionAmbient />
+      <SectionAmbient variant="process" />
       <div ref={ref} className="relative mx-auto max-w-5xl">
         <div
           className={`mb-8 text-center transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          <Eyebrow>Process</Eyebrow>
+          <Eyebrow variant="teal">Process</Eyebrow>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
-            <span className={headingGradient}>How it works</span>
+            <span className={heading.process}>How it works</span>
           </h2>
         </div>
 
@@ -44,7 +44,7 @@ const ProcessSection = () => {
               className={`flex min-h-[180px] flex-col rounded-2xl border border-border/50 bg-card/90 p-5 shadow-lg shadow-primary/[0.06] ring-1 ring-black/[0.04] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
               style={{ transitionDelay: visible ? `${100 + i * 60}ms` : "0ms" }}
             >
-              <span className="bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-xs font-bold tabular-nums text-transparent">
+              <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-xs font-bold tabular-nums text-transparent">
                 {step.number}
               </span>
               <h3 className="mt-2 text-base font-bold tracking-tight text-foreground">{step.title}</h3>
