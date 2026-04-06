@@ -29,7 +29,7 @@ const ProcessSection = () => {
       <SectionAmbient variant="process" />
       <div ref={ref} className="relative mx-auto max-w-5xl">
         <div
-          className={`mb-8 text-center transition-all duration-[1900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 scale-100 blur-0" : "opacity-0 translate-y-6 scale-[0.998] blur-sm"}`}
+          className={`mb-8 text-center transition-all duration-[3200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
         >
           <Eyebrow variant="teal">Process</Eyebrow>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
@@ -41,7 +41,7 @@ const ProcessSection = () => {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className={`flex min-h-[180px] flex-col rounded-2xl border border-border/50 bg-card/90 p-5 shadow-lg shadow-primary/[0.06] ring-1 ring-black/[0.04] transition-all duration-[1500ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-5 scale-[0.998]"}`}
+              className={`flex min-h-[180px] flex-col rounded-2xl border border-border/50 bg-card/90 p-5 shadow-lg shadow-primary/[0.06] ring-1 ring-black/[0.04] transition-all duration-[2600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
               style={{ transitionDelay: visible ? `${100 + i * 60}ms` : "0ms" }}
             >
               <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-xs font-bold tabular-nums text-transparent">

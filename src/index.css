@@ -104,18 +104,18 @@
   body {
     @apply bg-background text-foreground font-sans;
     transition:
-      background-color 0.75s cubic-bezier(0.22, 1, 0.36, 1),
-      color 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+      background-color 1.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      color 1.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   /* Theme cross-fade on chrome only (avoids fighting scroll-reveal transforms on cards) */
   nav,
   footer {
     transition:
-      background-color 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-      color 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-      box-shadow 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      background-color 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      border-color 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      color 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      box-shadow 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   h1, h2, h3, h4 {
@@ -169,23 +169,23 @@
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(12px) scale(0.998);
-    filter: blur(4px);
+    transform: translateY(8px);
+    filter: blur(2px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
     filter: blur(0);
   }
 }
 
 .animate-fade-up {
-  animation: fade-up 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fade-up 2.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /* View Transitions: theme toggle (Chromium, Safari 18+) */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.75s;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-duration: 1.15s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }

@@ -18,7 +18,7 @@ const PainPointsSection = () => {
       <SectionAmbient variant="pain" />
       <div
         ref={ref}
-        className={`relative mx-auto max-w-6xl transition-all duration-[1900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 scale-100 blur-0" : "opacity-0 translate-y-7 scale-[0.998] blur-sm"}`}
+        className={`relative mx-auto max-w-6xl transition-all duration-[3200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
       >
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-12">
           <div className="text-center lg:sticky lg:top-28 lg:text-left">
@@ -37,7 +37,7 @@ const PainPointsSection = () => {
             {painPoints.map((point, i) => (
               <li
                 key={point.title}
-                className={`flex flex-col rounded-2xl border border-destructive/30 bg-white/95 p-4 shadow-lg shadow-destructive/[0.08] ring-1 ring-destructive/10 transition-all duration-[1500ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:shadow-xl dark:bg-card/95 ${visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-4 scale-[0.998]"}`}
+                className={`flex flex-col rounded-2xl border border-destructive/30 bg-white/95 p-4 shadow-lg shadow-destructive/[0.08] ring-1 ring-destructive/10 transition-all duration-[2600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-0.5 hover:shadow-xl dark:bg-card/95 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
                 style={{ transitionDelay: visible ? `${i * 55}ms` : "0ms" }}
               >
                 <p className="text-[15px] font-bold leading-tight text-foreground">{point.title}</p>

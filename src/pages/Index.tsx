@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background transition-colors duration-700 ease-out">
+    <div className="min-h-screen bg-background transition-colors duration-[1100ms] ease-out">
       <Navbar />
       <HeroSection />
       <PainPointsSection />
