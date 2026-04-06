@@ -11,7 +11,7 @@ const AboutSection = () => {
       <SectionAmbient variant="about" />
       <div
         ref={ref}
-        className={`relative mx-auto flex max-w-5xl flex-col items-center gap-6 text-center sm:flex-row sm:gap-10 sm:text-left transition-all duration-[3200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+        className={`relative mx-auto flex max-w-5xl flex-col items-center gap-6 text-center sm:flex-row sm:gap-10 sm:text-left transition-all duration-[3800ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
       >
         <div className="relative flex-shrink-0">
           <div className="pointer-events-none absolute -inset-2 rounded-[1.25rem] bg-primary/25 blur-xl" aria-hidden />

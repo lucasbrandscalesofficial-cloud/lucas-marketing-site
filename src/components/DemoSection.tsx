@@ -40,7 +40,7 @@ const DemoSection = () => {
       <SectionAmbient variant="demo" />
       <div ref={ref} className="relative mx-auto max-w-5xl">
         <div
-          className={`mb-8 text-center transition-all duration-[3200ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+          className={`mb-8 text-center transition-all duration-[3800ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
         >
           <Eyebrow variant="amber">Demo work</Eyebrow>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
@@ -53,7 +53,7 @@ const DemoSection = () => {
           {demos.map((demo, i) => (
             <div
               key={demo.title}
-              className={`group flex flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/95 shadow-lg shadow-primary/[0.05] ring-1 ring-black/[0.04] transition-all duration-[2600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/15 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
+              className={`group flex flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/95 shadow-lg shadow-primary/[0.05] ring-1 ring-black/[0.04] transition-all duration-[3100ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/15 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
               style={{ transitionDelay: visible ? `${100 + i * 60}ms` : "0ms" }}
             >
               <div className="overflow-hidden bg-muted ring-1 ring-black/[0.04]">
