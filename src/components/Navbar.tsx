@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -31,16 +32,19 @@ const Navbar = () => {
         </a>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted-foreground transition-colors duration-200 hover:text-primary"
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="hidden items-center gap-6 md:flex">
+          <div className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-muted-foreground transition-colors duration-200 hover:text-primary"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <ThemeToggle />
           <Button variant="hero" size="default" className="shadow-md shadow-primary/20" asChild>
             <a href="#contact">Book a Call</a>
           </Button>
@@ -55,6 +59,9 @@ const Navbar = () => {
       {/* Mobile menu */}
       {open && (
         <div className="space-y-4 border-b border-border/80 bg-background/95 px-6 pb-6 pt-2 shadow-lg shadow-primary/[0.04] backdrop-blur-xl md:hidden">
+          <div className="flex justify-center pb-2">
+            <ThemeToggle />
+          </div>
           {navLinks.map((link) => (
             <a
               key={link.href}

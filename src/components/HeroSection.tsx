@@ -38,7 +38,7 @@ const HeroSection = () => {
         <div className="relative">
           <div className="pointer-events-none absolute -inset-3 rounded-[1.35rem] bg-primary/20 blur-2xl animate-results-glow" aria-hidden />
           <div className="relative rounded-[1.15rem] bg-gradient-to-br from-primary/50 via-sky-500/35 to-emerald-500/40 p-[2px] shadow-2xl shadow-primary/20">
-            <div className="rounded-[1.05rem] border border-white/10 bg-gradient-to-b from-primary/[0.09] to-white p-6 ring-1 ring-black/[0.04]">
+            <div className="rounded-[1.05rem] border border-white/10 bg-gradient-to-b from-primary/[0.09] to-white p-6 ring-1 ring-black/[0.04] dark:border-white/5 dark:from-primary/[0.14] dark:to-background">
               <p className="text-[11px] font-bold uppercase tracking-wide text-primary">What you get</p>
               <ul className="mt-4 space-y-3 text-sm font-medium leading-snug text-foreground">
                 <li className="flex gap-2.5">

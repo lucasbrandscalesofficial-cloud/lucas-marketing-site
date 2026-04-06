@@ -37,7 +37,7 @@ const PainPointsSection = () => {
             {painPoints.map((point, i) => (
               <li
                 key={point.title}
-                className={`flex flex-col rounded-2xl border border-destructive/30 bg-white/95 p-4 shadow-lg shadow-destructive/[0.08] ring-1 ring-destructive/10 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-xl ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}
+                className={`flex flex-col rounded-2xl border border-destructive/30 bg-white/95 p-4 shadow-lg shadow-destructive/[0.08] ring-1 ring-destructive/10 transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-xl dark:bg-card/95 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"}`}
                 style={{ transitionDelay: visible ? `${i * 55}ms` : "0ms" }}
               >
                 <p className="text-[15px] font-bold leading-tight text-foreground">{point.title}</p>

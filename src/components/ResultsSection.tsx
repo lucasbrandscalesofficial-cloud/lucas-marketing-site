@@ -43,7 +43,7 @@ const ResultsSection = () => {
                 <span className="text-[10px] font-medium text-muted-foreground/80">The baseline</span>
               </div>
               <figure className="group relative overflow-hidden rounded-2xl border border-dashed border-muted-foreground/35 bg-muted/30 p-1 shadow-inner ring-1 ring-black/[0.04]">
-                <div className="overflow-hidden rounded-[0.9rem] bg-[hsl(222_28%_9%)] ring-1 ring-black/[0.06]">
+                <div className="overflow-hidden rounded-[0.9rem] bg-[hsl(222_28%_9%)] ring-1 ring-black/[0.06] dark:bg-black/60 dark:ring-white/10">
                   <img
                     src="/campaign-results-before.png"
                     alt="Ads Manager at campaign start: 1 call placed, $23.69 cost per call, $23.69 spent, $20 daily budget, 1 lead, 975 reach, 1,158 impressions."
@@ -59,7 +59,7 @@ const ResultsSection = () => {
             {/* Arrow */}
             <div className="flex shrink-0 flex-col items-center gap-1 lg:px-2" aria-hidden>
               <div
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary/25 via-primary/15 to-primary/5 text-primary shadow-lg shadow-primary/20 ring-2 ring-primary/35 ring-offset-4 ring-offset-[hsl(220_20%_97%)]"
+                className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary/25 via-primary/15 to-primary/5 text-primary shadow-lg shadow-primary/20 ring-2 ring-primary/35 ring-offset-4 ring-offset-background"
               >
                 <ArrowDown size={26} strokeWidth={2.5} className="animate-results-nudge-y lg:hidden" />
                 <ArrowRight size={28} strokeWidth={2.5} className="hidden animate-results-nudge-x lg:block" />
@@ -79,7 +79,7 @@ const ResultsSection = () => {
                   <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">NOW</p>
                   <TrendingUp className="h-4 w-4 text-emerald-600" strokeWidth={2.5} aria-hidden />
                 </div>
-                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-500/25">
+                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-500/25 dark:text-emerald-400">
                   The payoff
                 </span>
               </div>
@@ -90,7 +90,7 @@ const ResultsSection = () => {
                   aria-hidden
                 />
                 <div className="relative rounded-[1.15rem] bg-gradient-to-br from-primary via-sky-500/90 to-emerald-500/85 p-[2.5px] shadow-2xl shadow-primary/25">
-                  <figure className="overflow-hidden rounded-[1.05rem] bg-[hsl(222_28%_9%)] ring-1 ring-white/10">
+                  <figure className="overflow-hidden rounded-[1.05rem] bg-[hsl(222_28%_9%)] ring-1 ring-white/10 dark:bg-black/60">
                     <img
                       src="/campaign-results-now.png"
                       alt="Ads Manager current: 16 calls placed, $38.28 cost per call, $600 spent, $20 daily budget, 16 leads, 21,522 reach, 32,390 impressions."
