@@ -21,9 +21,9 @@ const Navbar = () => {
           <img
             src="/lucas-marketing-logo.png"
             alt=""
-            width={36}
-            height={36}
-            className="h-9 w-9 shrink-0 object-contain"
+            width={44}
+            height={44}
+            className="h-11 w-11 shrink-0 object-contain"
           />
           <span className="bg-gradient-to-r from-sky-800 via-foreground to-primary bg-clip-text text-lg font-bold tracking-tight text-transparent">
             Lucas Marketing
