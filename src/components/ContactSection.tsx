@@ -19,7 +19,7 @@ const ContactSection = () => {
       <SectionAmbient variant="contact" />
       <div
         ref={ref}
-        className={`relative mx-auto max-w-5xl transition-all duration-[1150ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${visible ? "opacity-100 translate-y-0 scale-100 blur-0" : "opacity-0 translate-y-14 scale-[0.96] blur-md"}`}
+        className={`relative mx-auto max-w-5xl transition-all duration-[1900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 scale-100 blur-0" : "opacity-0 translate-y-6 scale-[0.998] blur-sm"}`}
       >
         <div className="relative rounded-[1.15rem] bg-gradient-to-br from-primary/50 via-sky-500/40 to-emerald-500/45 p-[2px] shadow-2xl shadow-primary/20">
           <div className="overflow-hidden rounded-[1.05rem] border border-white/10 bg-card ring-1 ring-black/[0.04] md:p-px">
