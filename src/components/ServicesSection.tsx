@@ -30,7 +30,7 @@ const ServicesSection = () => {
       <SectionAmbient variant="services" />
       <div ref={ref} className="relative mx-auto max-w-5xl">
         <div
-          className={`mb-8 text-center transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`mb-8 text-center transition-all duration-[1150ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${visible ? "opacity-100 translate-y-0 scale-100 blur-0" : "opacity-0 translate-y-14 scale-[0.96] blur-md"}`}
         >
           <Eyebrow variant="violet">Services</Eyebrow>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
@@ -43,7 +43,7 @@ const ServicesSection = () => {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`group flex min-h-[200px] flex-col rounded-2xl border border-border/50 bg-card/90 p-5 shadow-lg shadow-primary/[0.06] ring-1 ring-black/[0.04] transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+              className={`group flex min-h-[200px] flex-col rounded-2xl border border-border/50 bg-card/90 p-5 shadow-lg shadow-primary/[0.06] ring-1 ring-black/[0.04] transition-all duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 ${visible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-12 scale-[0.97]"}`}
               style={{ transitionDelay: visible ? `${100 + i * 60}ms` : "0ms" }}
             >
               <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/25 to-indigo-500/15 ring-1 ring-violet-400/25 transition group-hover:from-violet-500/35 group-hover:to-indigo-500/25">

@@ -103,6 +103,19 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    transition:
+      background-color 0.5s cubic-bezier(0.32, 0.72, 0, 1),
+      color 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  /* Theme cross-fade on chrome only (avoids fighting scroll-reveal transforms on cards) */
+  nav,
+  footer {
+    transition:
+      background-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   h1, h2, h3, h4 {
@@ -156,16 +169,23 @@
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(16px);
-    filter: blur(4px);
+    transform: translateY(28px) scale(0.98);
+    filter: blur(10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
     filter: blur(0);
   }
 }
 
 .animate-fade-up {
-  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: fade-up 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* View Transitions: theme toggle (Chromium, Safari 18+) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.55s;
+  animation-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
 }
