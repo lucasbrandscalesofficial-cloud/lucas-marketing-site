@@ -166,21 +166,20 @@
   }
 }
 
+/* Opacity + translate3d only — no blur (blur on large text causes jank). */
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(8px);
-    filter: blur(2px);
+    transform: translate3d(0, 12px, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
-    filter: blur(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 .animate-fade-up {
-  animation: fade-up 2.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: fade-up 1.1s cubic-bezier(0.33, 1, 0.68, 1) both;
 }
 
 /* View Transitions: theme toggle (Chromium, Safari 18+) */
