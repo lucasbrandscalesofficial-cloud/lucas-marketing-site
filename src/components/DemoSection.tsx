@@ -40,7 +40,7 @@ const DemoSection = () => {
       <SectionAmbient variant="demo" />
       <div ref={ref} className="relative mx-auto max-w-5xl">
         <div
-          className={`mb-8 text-center transition-all duration-[4600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+          className={`mb-8 text-center transition-[opacity,transform] duration-[5200ms] ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:transition-none ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
         >
           <Eyebrow variant="amber">Demo work</Eyebrow>
           <h2 className="mt-2 text-2xl font-bold tracking-tight md:text-3xl">
@@ -53,14 +53,14 @@ const DemoSection = () => {
           {demos.map((demo, i) => (
             <div
               key={demo.title}
-              className={`group flex flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/95 shadow-lg shadow-primary/[0.05] ring-1 ring-black/[0.04] transition-all duration-[3900ms] ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/15 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
-              style={{ transitionDelay: visible ? `${100 + i * 60}ms` : "0ms" }}
+              className={`group flex flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/95 shadow-lg shadow-primary/[0.05] ring-1 ring-black/[0.04] transition-[opacity,transform,box-shadow] duration-[4400ms] ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-primary/15 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1.5"}`}
+              style={{ transitionDelay: visible ? `${120 + i * 45}ms` : "0ms" }}
             >
               <div className="overflow-hidden bg-muted ring-1 ring-black/[0.04]">
                 <img
                   src={demo.image}
                   alt={`${demo.title} sample ad creative`}
-                  className="block h-auto w-full max-w-full align-top transition duration-500 group-hover:scale-[1.03]"
+                  className="block h-auto w-full max-w-full align-top transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover:scale-[1.015]"
                   loading="lazy"
                   decoding="async"
                 />

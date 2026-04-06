@@ -18,13 +18,14 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 bg-background/75 shadow-sm shadow-primary/[0.06] backdrop-blur-xl">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" aria-hidden />
       <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a href="#" className="flex min-w-0 items-center gap-2.5">
+        <a href="#" className="isolate flex min-w-0 items-center gap-2.5">
           <img
             src="/lucas-marketing-logo.png"
             alt=""
             width={44}
             height={44}
-            className="h-11 w-11 shrink-0 object-contain"
+            decoding="async"
+            className="h-11 w-11 shrink-0 bg-transparent object-contain"
           />
           <span className="bg-gradient-to-r from-sky-800 via-foreground to-primary bg-clip-text text-lg font-bold tracking-tight text-transparent">
             Lucas Marketing

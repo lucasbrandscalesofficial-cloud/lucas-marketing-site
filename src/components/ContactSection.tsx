@@ -19,7 +19,7 @@ const ContactSection = () => {
       <SectionAmbient variant="contact" />
       <div
         ref={ref}
-        className={`relative mx-auto max-w-5xl transition-all duration-[4600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+        className={`relative mx-auto max-w-5xl transition-[opacity,transform] duration-[5200ms] ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:transition-none ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
       >
         <div className="relative rounded-[1.15rem] bg-gradient-to-br from-primary/50 via-sky-500/40 to-emerald-500/45 p-[2px] shadow-2xl shadow-primary/20">
           <div className="overflow-hidden rounded-[1.05rem] border border-white/10 bg-card ring-1 ring-black/[0.04] md:p-px">
@@ -42,7 +42,7 @@ const ContactSection = () => {
                   <div className="mt-8 space-y-2.5 text-sm text-muted-foreground">
                     <a
                       href="mailto:lucasbrandscalesofficial@gmail.com"
-                      className="group flex gap-2.5 rounded-xl border border-border/70 bg-background/90 p-3 shadow-sm ring-1 ring-black/[0.03] transition-all hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-md hover:shadow-primary/10"
+                      className="group flex gap-2.5 rounded-xl border border-border/70 bg-background/90 p-3 shadow-sm ring-1 ring-black/[0.03] transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-md hover:shadow-primary/10"
                     >
                       <Mail size={16} className="mt-0.5 shrink-0 text-primary" aria-hidden />
                       <span className="min-w-0 break-all leading-snug">lucasbrandscalesofficial@gmail.com</span>
@@ -51,7 +51,7 @@ const ContactSection = () => {
                       href="https://instagram.com/lucasmarketing.co"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex w-fit max-w-full items-center gap-2.5 rounded-xl border border-border/70 bg-background/90 px-3 py-2.5 shadow-sm ring-1 ring-black/[0.03] transition-all hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-md hover:shadow-primary/10"
+                      className="inline-flex w-fit max-w-full items-center gap-2.5 rounded-xl border border-border/70 bg-background/90 px-3 py-2.5 shadow-sm ring-1 ring-black/[0.03] transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-md hover:shadow-primary/10"
                     >
                       <Instagram size={16} className="shrink-0 text-primary" aria-hidden />
                       <span className="font-medium text-foreground">@lucasmarketing.co</span>

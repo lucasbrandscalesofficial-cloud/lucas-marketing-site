@@ -12,7 +12,7 @@ const ResultsSection = () => {
 
       <div ref={ref} className="relative mx-auto max-w-6xl">
         <div
-          className={`mb-10 text-center transition-all duration-[4600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+          className={`mb-10 text-center transition-[opacity,transform] duration-[5200ms] ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:transition-none ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
         >
           <div className="mb-4 flex justify-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-gradient-to-r from-primary/10 via-primary/[0.07] to-emerald-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary shadow-sm ring-1 ring-primary/10">
@@ -30,13 +30,13 @@ const ResultsSection = () => {
         </div>
 
         <div
-          className={`transition-all delay-100 duration-[4600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+          className={`transition-[opacity,transform] delay-100 duration-[5200ms] ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:transition-none ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"}`}
         >
           <div className="flex flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-6 xl:gap-10">
             {/* Before */}
             <div
-              className={`min-w-0 flex-1 transition-all duration-[3900ms] ease-[cubic-bezier(0.22,1,0.36,1)] lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}
-              style={{ transitionDelay: visible ? "80ms" : "0ms" }}
+              className={`min-w-0 flex-1 transition-[opacity,transform] duration-[4400ms] ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:transition-none lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"}`}
+              style={{ transitionDelay: visible ? "100ms" : "0ms" }}
             >
               <div className="mb-3 flex flex-col items-center gap-1.5">
                 <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-muted-foreground">Before</p>
@@ -47,7 +47,7 @@ const ResultsSection = () => {
                   <img
                     src="/campaign-results-before.png"
                     alt="Ads Manager at campaign start: 1 call placed, $23.69 cost per call, $23.69 spent, $20 daily budget, 1 lead, 975 reach, 1,158 impressions."
-                    className="block h-auto w-full align-top opacity-[0.92] transition duration-300 group-hover:opacity-100"
+                    className="block h-auto w-full align-top opacity-[0.92] transition-opacity duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] group-hover:opacity-100"
                     loading="lazy"
                     decoding="async"
                   />
@@ -71,8 +71,8 @@ const ResultsSection = () => {
 
             {/* Now */}
             <div
-              className={`min-w-0 flex-1 transition-all duration-[3900ms] ease-[cubic-bezier(0.22,1,0.36,1)] lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}
-              style={{ transitionDelay: visible ? "180ms" : "0ms" }}
+              className={`min-w-0 flex-1 transition-[opacity,transform] duration-[4400ms] ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:transition-none lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"}`}
+              style={{ transitionDelay: visible ? "200ms" : "0ms" }}
             >
               <div className="mb-3 flex flex-col items-center gap-1.5">
                 <div className="flex items-center gap-2">
@@ -94,7 +94,7 @@ const ResultsSection = () => {
                     <img
                       src="/campaign-results-now.png"
                       alt="Ads Manager current: 16 calls placed, $38.28 cost per call, $600 spent, $20 daily budget, 16 leads, 21,522 reach, 32,390 impressions."
-                      className="block h-auto w-full align-top transition duration-300 hover:scale-[1.02] hover:brightness-[1.03]"
+                      className="block h-auto w-full align-top transition-[transform,filter] duration-700 ease-[cubic-bezier(0.33,1,0.68,1)] hover:scale-[1.01] hover:brightness-[1.02]"
                       loading="lazy"
                       decoding="async"
                     />

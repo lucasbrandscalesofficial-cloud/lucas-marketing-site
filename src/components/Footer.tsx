@@ -3,13 +3,14 @@ const Footer = () => {
     <footer className="relative overflow-hidden border-t border-primary/10 bg-gradient-to-b from-muted/35 to-background py-8">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent" aria-hidden />
       <div className="relative mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 text-sm text-muted-foreground md:flex-row">
-        <span className="flex items-center gap-2.5">
+        <span className="isolate flex items-center gap-2.5">
           <img
             src="/lucas-marketing-logo.png"
             alt=""
             width={36}
             height={36}
-            className="h-9 w-9 shrink-0 object-contain opacity-90"
+            decoding="async"
+            className="h-9 w-9 shrink-0 bg-transparent object-contain"
           />
           <span>&copy; {new Date().getFullYear()} Lucas Marketing. All rights reserved.</span>
         </span>
