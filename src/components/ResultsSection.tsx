@@ -12,7 +12,7 @@ const ResultsSection = () => {
 
       <div ref={ref} className="relative mx-auto max-w-6xl">
         <div
-          className={`mb-10 text-center transition-all duration-[3800ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+          className={`mb-10 text-center transition-all duration-[4600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
         >
           <div className="mb-4 flex justify-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-gradient-to-r from-primary/10 via-primary/[0.07] to-emerald-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-primary shadow-sm ring-1 ring-primary/10">
@@ -30,12 +30,12 @@ const ResultsSection = () => {
         </div>
 
         <div
-          className={`transition-all delay-100 duration-[3800ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
+          className={`transition-all delay-100 duration-[4600ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-3 blur-[2px]"}`}
         >
           <div className="flex flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:justify-center lg:gap-6 xl:gap-10">
             {/* Before */}
             <div
-              className={`min-w-0 flex-1 transition-all duration-[3100ms] ease-[cubic-bezier(0.22,1,0.36,1)] lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}
+              className={`min-w-0 flex-1 transition-all duration-[3900ms] ease-[cubic-bezier(0.22,1,0.36,1)] lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}
               style={{ transitionDelay: visible ? "80ms" : "0ms" }}
             >
               <div className="mb-3 flex flex-col items-center gap-1.5">
@@ -71,7 +71,7 @@ const ResultsSection = () => {
 
             {/* Now */}
             <div
-              className={`min-w-0 flex-1 transition-all duration-[3100ms] ease-[cubic-bezier(0.22,1,0.36,1)] lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}
+              className={`min-w-0 flex-1 transition-all duration-[3900ms] ease-[cubic-bezier(0.22,1,0.36,1)] lg:max-w-[min(100%,420px)] ${visible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"}`}
               style={{ transitionDelay: visible ? "180ms" : "0ms" }}
             >
               <div className="mb-3 flex flex-col items-center gap-1.5">

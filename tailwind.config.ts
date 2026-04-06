@@ -96,9 +96,9 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "results-nudge-x": "results-nudge-x 6.5s cubic-bezier(0.45,0,0.55,1) infinite",
-        "results-nudge-y": "results-nudge-y 6.5s cubic-bezier(0.45,0,0.55,1) infinite",
-        "results-glow": "results-glow 11s cubic-bezier(0.45,0,0.55,1) infinite",
+        "results-nudge-x": "results-nudge-x 8.5s cubic-bezier(0.45,0,0.55,1) infinite",
+        "results-nudge-y": "results-nudge-y 8.5s cubic-bezier(0.45,0,0.55,1) infinite",
+        "results-glow": "results-glow 14s cubic-bezier(0.45,0,0.55,1) infinite",
       },
     },
   },

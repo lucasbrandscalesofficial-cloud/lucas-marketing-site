@@ -104,18 +104,18 @@
   body {
     @apply bg-background text-foreground font-sans;
     transition:
-      background-color 1.35s cubic-bezier(0.4, 0, 0.2, 1),
-      color 1.35s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color 1.65s cubic-bezier(0.4, 0, 0.2, 1),
+      color 1.65s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Theme cross-fade on chrome only (avoids fighting scroll-reveal transforms on cards) */
   nav,
   footer {
     transition:
-      background-color 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-      border-color 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-      color 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+      color 1.5s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 1.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   h1, h2, h3, h4 {
@@ -185,6 +185,6 @@
 /* View Transitions: theme toggle (Chromium, Safari 18+) */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 1.35s;
+  animation-duration: 1.65s;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
